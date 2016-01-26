@@ -1,0 +1,31 @@
+{
+  "name": "webpack-config-source-maps",
+  "version": "0.2.0",
+  "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "repository": "izaakschroeder/webpack-config-metalab",
+  "license": "CC0-1.0",
+  "main": "dist/source-maps.webpack.config.js",
+  "scripts": {
+    "prepublish": "./node_modules/.bin/babel -s -d dist src",
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "npm run lint"
+  },
+  "peerDependencies": {
+    "webpack": "*",
+    "source-map-support": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-metalab": "^0.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-metalab": "^2.0.0-beta.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-import": "^0.12.1",
+    "eslint-plugin-react": "^3.16.0",
+    "source-map-support": "^0.4.0",
+    "webpack": "^1.12.12"
+  },
+  "dependencies": {
+    "webpack-partial": "^1.0.0"
+  }
+}
