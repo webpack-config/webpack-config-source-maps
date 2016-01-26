@@ -21,8 +21,7 @@ export default ({
       ] : [],
       new SourceMapDevToolPlugin({
         test: /\.(css|js)($|\?)/,
-        filename: 'map/[id].[hash].map',
-        moduleFilenameTemplate: '',
+        filename: 'map/[filebase].[hash].map',
         append: `\n//# sourceMappingURL=${url()}`,
         module: true,
         columns: true,
