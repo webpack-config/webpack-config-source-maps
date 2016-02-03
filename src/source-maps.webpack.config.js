@@ -15,6 +15,15 @@ export default ({
     entry: enableRuntime && target === 'node' ?
       inject(entry, [runtime]) : entry,
 
+    // Include source-maps for libraries too!
+    module: {
+      loaders: [{
+        name: 'source-map',
+        test: /\.jsx?$/,
+        loader: require.resolve('source-map-loader'),
+      }],
+    },
+
     // Generate our own source-map files.
     plugins: [
       new SourceMapDevToolPlugin({
