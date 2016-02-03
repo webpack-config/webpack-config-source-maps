@@ -2,7 +2,7 @@ import {partial, inject} from 'webpack-partial';
 import {SourceMapDevToolPlugin} from 'webpack';
 
 export default ({
-  runtime: enableRuntime = process.env.NODE_ENV !== 'production',
+  runtime: enableRuntime = true,
 } = {}) => (config) => {
   const {entry, target} = config;
 
