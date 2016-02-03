@@ -3,7 +3,7 @@ import {SourceMapDevToolPlugin} from 'webpack';
 
 export default ({
   runtime: enableRuntime = process.env.NODE_ENV !== 'production',
-}) => (config) => {
+} = {}) => (config) => {
   const {entry, target} = config;
 
   // TODO: Generate real URLs using SOURCE_MAP_URL.
